@@ -1,0 +1,60 @@
+/* ============================================= */
+/*              Footer                           */
+/* ============================================= */
+
+footer {
+    background: $white;
+    & ul:first-of-type {
+        display: flex;
+        flex-direction: column;
+        @include mq($brk-m) {
+            flex-direction: row;
+        }
+        @include mq($brk-l) {
+            order: 1;
+        }
+
+        & li {
+            overflow: hidden;
+            margin: 2rem auto;
+            @include mq($brk-m) {
+                padding: 1rem;
+            }
+            @include mq($brk-l) {
+                &:last-of-type {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    & ul:last-of-type {
+        display: flex;
+        justify-content: center;
+        & li {
+            overflow: hidden;
+            display: inline-block;
+            margin: .5rem;
+            @include mq($brk-m) {
+                padding: 1rem;
+            }
+
+            @include mq($brk-l) {
+                padding: 0;
+            }
+        }
+        @include mq($brk-l) {
+            align-self: center;
+        }
+    }
+
+    @include mq($brk-l) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+}
+
+#nav-footer li a:hover {
+   color: $color-secondary;    //there are some specificity issues I broke my head over, so I'm just adding this below all
+}

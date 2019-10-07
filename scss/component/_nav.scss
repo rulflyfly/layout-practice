@@ -1,0 +1,108 @@
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    & span {
+        margin: .3rem;
+        padding: .5rem;
+        background-color: $color-bg-primary;
+        border-radius: .3rem;
+        font-weight: bold;
+       @include mq($brk-m) {
+           display: none;
+       }
+    }
+    @include mq($brk-m) {
+        width: 95%;
+        margin: .5rem auto;
+      }
+}
+
+.nav {
+
+    &-links {
+        position: absolute;
+        right: 0px;
+        top: 8vh;
+        background-color: rgba($color-bg-primary, 90%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in; 
+        border-radius: .7em 0 0 .7em;
+
+        & li {
+            list-style: none;
+            margin: 4em;
+            padding: .3rem;
+            @include mq($brk-m) {
+                &:not(.logo) {
+                    @include hover($color-bg-primary);
+                }
+                margin: .3rem;
+                padding: .5rem;
+                background-color: rgba($color-bg-primary, 40%);
+                border-radius: .3rem;
+                font-weight: bold;
+            }
+
+            & a {
+                text-decoration: none;
+            }
+        }
+
+        & li:first-of-type {
+            display: none;
+            @include mq($brk-m) {
+                display: unset;
+                margin-right: auto;
+            }
+        }
+
+        @include mq($brk-m) {
+          position: unset;
+          flex-direction: row;
+          justify-content: space-between;
+          flex-grow: 1;
+          transform: translateX(0%);
+          background-color: transparent;
+          width: unset;
+        }
+    }
+
+    &-active {
+        transform: translateX(0%);
+      }
+}
+   
+.burger div {
+        width: 25px;
+        height: 3px;
+        background-color: $color-text-primary;
+        margin: 5px;
+        border-radius: .5em;
+        transition: .2s ease-in;
+        @include mq($brk-m) {
+            display: none;
+        }
+    }
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+.toggle .line2 {
+opacity: 0;
+}
+    
+    
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    }
+    

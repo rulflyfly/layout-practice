@@ -1,0 +1,58 @@
+/* ============================================= */
+/*              Cards                            */
+/* ============================================= */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    margin-bottom: 1rem;
+    box-shadow: 0px 15px 13px -10px $color-text-primary;
+
+    .about & {
+        padding: 0;
+        box-shadow: none;
+        display: block;
+        overflow: hidden;
+        width: 90%;
+        max-width: 90rem;
+        margin: 0 auto;
+
+        @include mq($brk-l) {
+            display: flex;
+            flex-direction: row;
+            & h2 {
+                margin-top: 0;
+            }
+            & img {
+                width: 50%;
+            }
+            & .float {
+                width: 50%;
+                align-self: center;
+            }
+        }
+    }
+
+    @include mq($brk-m) {
+        margin-top: 3rem;
+      }
+
+    @include mq($brk-l) {
+        &:nth-child(n+2) {
+           display: inline-block;
+           width: 28%;
+           margin: 2.3%;
+        }
+        &:nth-of-type(2) {
+            margin-left: 3%;
+        }
+    }
+}
+
+.articles {
+    @include mq($brk-l) {
+        padding: 3rem;
+    }
+}
+

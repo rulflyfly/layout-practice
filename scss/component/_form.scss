@@ -1,0 +1,31 @@
+/* ============================================= */
+/*              Form                             */
+/* ============================================= */
+
+.form {
+    & input {
+       @extend %centered-block;
+       padding-left: .5rem;
+       background: lighten($color-bg-primary, 10%);
+       border-style: none;
+       @include mq($brk-l) {
+           width: 30%;
+       }
+    }
+
+    & button {
+        @include hover($white);
+        @extend %centered-block;
+        background: lighten($color-bg-primary, 5%);
+        border-style: none;
+        border: 1px solid $color-secondary;
+        @include mq($brk-l) {
+            width: 30%;
+        }
+    }
+
+    @include mq($brk-m) {
+        width: 80%;
+        margin: 0 auto 2rem;
+    }
+}

@@ -1,0 +1,19 @@
+/* ============================================= */
+/*              line divs                        */
+/* ============================================= */
+
+.line {
+    &-fat {
+        width: 3rem;
+        height: .2rem;
+        background: $color-text-primary;
+        margin: .7rem auto;
+    }
+
+    &-thin {
+        width: 2rem;
+        height: .1rem;
+        background: $color-text-primary;
+        margin: 2rem auto 0;
+    }
+}

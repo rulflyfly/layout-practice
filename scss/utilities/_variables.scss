@@ -1,0 +1,17 @@
+/* ============================================= */
+/*              Color variables                  */
+/* ============================================= */
+
+$white                   :     #fff;
+
+
+$color-text-primary      :     #0a2707;
+$color-bg-primary        :     #dae1d9;
+$color-secondary         :     lighten($color-text-primary, 20%);
+
+/* ============================================= */
+/*              MQ break points                  */
+/* ============================================= */
+
+$brk-m      :      '(min-width: 768px)';
+$brk-l      :      '(min-width: 1024px)';

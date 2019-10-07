@@ -1,0 +1,20 @@
+@mixin mq ($break-point) {
+    @media #{$break-point} {
+        @content;
+    }
+}
+
+@mixin hover ($color) {
+    transition: 1s;
+    &:hover {
+       background-color: $color;
+    }
+}
+
+@mixin pover ($color) {
+    transition: 1s;
+    &:hover {
+       color: $color;
+    }
+}
+

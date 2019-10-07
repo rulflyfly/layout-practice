@@ -1,0 +1,93 @@
+  /* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $color-text-primary;
+    font-family: 'Be Vietnam', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  @include mq($brk-m) {
+    width: 70%;
+  }
+  @include mq($brk-l) {
+    width: 90%;
+    max-width: 90rem;
+  }
+}
+
+body {
+    background: $color-bg-primary;
+    position: relative;
+}
+
+h1 {
+  overflow: hidden;
+  @include mq($brk-m) {
+    font-size: 4rem;
+  }
+}
+
+.banner p {
+  overflow: hidden;
+  @include mq($brk-m) {
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+
+.card p {
+  text-align: center;
+  margin: 2rem;
+  overflow: hidden;
+
+  &.about {
+    margin: 1rem;
+    padding-bottom: 1rem;
+    @include mq($brk-l) {
+      margin: 0;
+    }
+  }
+
+  @include mq($brk-m){
+    padding: 1rem;
+  }
+}
+
+footer p {
+  text-align: center;
+}
+
+
+.form p {
+  text-align: center;
+  margin: 2rem;
+  overflow: hidden;
+  @include mq($brk-m) {
+    padding: 1rem;
+  }
+  @include mq($brk-l) {
+    margin: 0;
+  }
+}
+
+footer a {
+  text-decoration: none;
+}
